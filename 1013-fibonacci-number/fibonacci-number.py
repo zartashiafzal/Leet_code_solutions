@@ -1,4 +1,4 @@
-#__________Basic function to print fibonacci series__________
+#__________Basic function to print fibonacci series in python__________
     # def fib(n):
     #     a=0
     #     b=1
@@ -13,13 +13,13 @@
 
 #___________ Now coming towards leetcode solution_________
 
-# # ITERATIVE Solution
-# class Solution:
-#     def fib(self, n: int) -> int:
-#         seen = {0: 0, 1:1}
-#         for i in range(2, n+1):
-#             seen[i] = seen[i-1] + seen[i-2]
-#         return(seen[n])
+# ITERATIVE Solution
+class Solution:
+    def fib(self, n: int) -> int:
+        seen = {0: 0, 1:1}
+        for i in range(2, n+1):
+            seen[i] = seen[i-1] + seen[i-2]
+        return(seen[n])
 
 
 # RECURSIVE Solution
