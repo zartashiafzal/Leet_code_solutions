@@ -1,23 +1,32 @@
+#__________Basic function to print fibonacci series__________
+    # def fib(n):
+    #     a=0
+    #     b=1
+    #     print(a)
+    #     print(b)
+    #     for i in range(2,n):
+    #         c=a+b
+    #         a=b
+    #         b=c
+    #         print(c)
+    # fib(5)
+
+#___________ Now coming towards leetcode solution_________
+
+# # ITERATIVE Solution
+# class Solution:
+#     def fib(self, n: int) -> int:
+#         seen = {0: 0, 1:1}
+#         for i in range(2, n+1):
+#             seen[i] = seen[i-1] + seen[i-2]
+#         return(seen[n])
+
+
+# RECURSIVE Solution
 class Solution:
     def fib(self, n: int) -> int:
         if n == 0:
             return 0
         if n == 1:
             return 1
-        
-        def fib_helper(n, memo):
-            if n in memo:
-                return memo[n]
-            else:
-                fib_val = fib_helper(n - 1, memo) + fib_helper(n - 2, memo)
-                memo[n] = fib_val
-                return fib_val
-        
-        memo = {0: 0, 1: 1}  # Memoization dictionary to store computed Fibonacci values
-        return fib_helper(n, memo)
-
-# Example usage
-sol = Solution()
-print(sol.fib(2))  # Output: 1
-print(sol.fib(3))  # Output: 2
-print(sol.fib(4))  # Output: 3
+        return(self.fib(n-1) + self. fib(n-2))
