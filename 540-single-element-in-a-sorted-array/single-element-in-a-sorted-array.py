@@ -10,5 +10,8 @@ class Solution:
                 l = mid + 1
             else:
                 r = mid
-        
+
+            if mid - 1 >= 0 and mid + 1 < n and nums[mid] != nums[mid + 1] and nums[mid] != nums[mid - 1]:
+                return nums[mid]
+                
         return nums[l]
