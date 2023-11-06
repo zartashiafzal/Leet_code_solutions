@@ -15,3 +15,4 @@ class Solution:
                 return nums[mid]
                 
         return nums[l]
+
